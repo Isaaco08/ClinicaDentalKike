@@ -1,0 +1,54 @@
+<br />
+<br />
+<h2>{{ Titulo }}</h2>
+
+<div class="formulario">
+  <ul>
+    @for (Expediente of Expedientes(); track Expediente.ExpedienteDePacienteId) {
+    <li>
+      <p>{{ Expediente.ExpedienteDePacienteId }}</p>
+      <form (ngSubmit)="modificarExpediente(Expediente.ExpedienteDePacienteId, expedienteForm)" #expedienteForm="ngForm">
+        <input type="text" [(ngModel)]="Expediente.DescripcionDeExpediente" name="DescripcionDeExpediente" required />
+        <h4>Fecha de Expediente: {{ ExpedienteFecha.FechaDeExpediente | date: formatoFecha }}</h4>
+        <select [(ngModel)]="Expediente.UsuarioId" name="UsuarioId" required>
+          @for (Usuario of Usuarios(); track Usuario.UsuarioId) {
+            <option [value]="Usuario.UsuarioId">{{Usuario.Nombre}} {{Usuario.PrimerApellido}} {{Usuario.SegundoApellido}}</option>
+          }  
+        </select>
+
+        <button id="btnModificarExpediente" type="submit">Modificar Expediente</button>
+      </form>
+      <button id="btnBorrarExpediente" (click)="borrarExpediente(Expediente.ExpedienteDePacienteId)">
+        Borrar Expediente</button>
+    </li>
+    } @empty {
+      <li>Nada que mostrar.</li>
+    }
+    <li>
+      <form (ngSubmit)="agregarExpediente()" #nuevoExpedienteForm="ngForm">
+        <input 
+          id="descripcionDeExpediente" 
+          placeholder="Descripción de Expediente" 
+          [(ngModel)]="nuevoExpediente.DescripcionDeExpediente" 
+          name="DescripcionDeExpediente" 
+          required 
+        />
+        <select 
+        id="cmbPacientes"
+          [(ngModel)]="nuevoExpediente.UsuarioId" 
+          name="UsuarioId" 
+          required 
+        >
+          <option *ngFor="let usuario of Usuarios()" [value]="usuario.UsuarioId">{{ usuario.Nombre }} {{ usuario.PrimerApellido }}</option>
+        </select>
+        <button id="btnAgregarExpediente" type="submit">Agregar Expediente</button>
+      </form>
+    </li>
+  </ul>
+</div>
+
+<!-- <pre>
+    <code>
+        {{ Expedientes() | json }} 
+    </code>
+</pre> -->

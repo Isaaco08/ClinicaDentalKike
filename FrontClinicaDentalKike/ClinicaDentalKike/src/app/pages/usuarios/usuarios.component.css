@@ -1,0 +1,100 @@
+/* Estilos para el formulario de tratamientos */
+h2 {
+    color: rgb(120, 90, 170);
+    font-family: 'Montserrat', sans-serif; /* Ejemplo de fuente atractiva */
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-left: 1%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Usa flexbox para controlar el tamaño de los elementos */
+    align-items: center; /* Centra verticalmente los elementos dentro de cada li */
+}
+
+li p {
+    margin-right: 3%;
+    font-weight: bold;
+}
+
+li input[type="text"] {
+    width: 100%;
+    margin-right: 2%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif; /* Ejemplo de fuente */
+}
+
+li button {
+    margin-left: 3%;
+    width: 25%;
+    padding: 8px 15px;
+    background-color: rgb(120, 90, 170);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif; /* Ejemplo de fuente */
+}
+
+#btnModificar {
+    margin-left: 3%;
+    display: block;
+    width: 25%;
+    padding: 8px 55px;
+    background-color: rgb(120, 90, 170);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif; /* Ejemplo de fuente */
+}
+
+#btnModificar:hover {
+    background-color: rgb(224, 146, 28);
+}
+
+#btnAgregar:hover {
+    background-color: rgb(13, 155, 60);
+}
+
+li button:hover {
+    background-color: rgb(160, 24, 24);
+}
+
+
+.formulario {
+    max-width: 70%; /* Ancho máximo del formulario */
+    padding-left: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+}
+
+#cmbTipoUsuario{
+    width: 100%;
+}
+
+#btnAgregar{
+    padding: 8px 45px;
+}

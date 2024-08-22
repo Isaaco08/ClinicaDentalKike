@@ -1,0 +1,100 @@
+/* Estilos para el formulario de expedientes */
+h2 {
+    color: rgb(120, 90, 170);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-left: 1%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 50%;
+    margin-left: 1%;
+}
+
+li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+li p {
+    margin-right: 3%;
+    font-weight: bold;
+}
+
+li input[type="text"], li input[type="datetime-local"], li select {
+    width: 100%;
+    margin-right: 2%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+li input[type="text"],
+li select {
+    width: 100%;
+    margin-right: 2%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#descripcionDeExpediente{
+    width: 100%;
+    margin-right: 2%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    margin-bottom: 3%;
+}
+
+#cmbPacientes{
+    margin-bottom: 3%;
+}
+
+li button {
+    padding: 8px 75px;
+    background-color: rgb(120, 90, 170);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#btnModificarExpediente{
+    margin-top: 5%;
+}
+
+#btnBorrarExpediente{
+    margin-left: 10%;
+}
+
+#btnModificarExpediente:hover{
+    background-color: rgb(224, 146, 28);
+}
+
+#btnAgregarExpediente:hover {
+    background-color: rgb(13, 155, 60);
+}
+
+#btnBorrarExpediente:hover {
+    background-color: rgb(160, 24, 24);
+}
+

@@ -1,0 +1,32 @@
+<br />
+<br />
+<h2>{{ Titulo }}</h2>
+
+<div class="formulario">
+<ul>
+    @for (Tratamiento of Tratamientos(); track Tratamiento.TratamientoId) {
+    <li>
+      <p>{{ Tratamiento.TratamientoId }}</p>
+      <input type="text"
+        (keydown.enter)="modificarTratamiento(Tratamiento.TratamientoId, $event)"
+        [value]="Tratamiento.DescripcionDeTratamiento"        
+      />
+      <button (click)="borrarTratamiento(Tratamiento.TratamientoId)">
+        Borrar Tratamiento</button>
+    </li>
+    } @empty {
+      <li>Nada que mostrar.</li>
+    }
+    <li>
+      <input id="descripcionTratamiento" placeholder="Descripcion de tratamiento" [(ngModel)]="descripcionTratamiento"
+        type="text" (keydown.enter)="agregarTratamiento()"/>
+    </li>
+</ul>
+</div>
+
+
+<!-- <pre>
+    <code>
+        {{ Tratamientos() | json }} 
+    </code>
+</pre> -->
